@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 
 import "react-vertical-timeline-component/style.min.css";
 
-import { styles } from "../styles";
+//import { styles } from "../styles";
 import { experiences } from "../constants";
-import { SectionWrapper } from "../hoc";
+// import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
 const ExperienceCard = ({ experience }) => {
@@ -60,10 +60,12 @@ const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>
+        {/* <p className={`${styles.sectionSubText} text-center`}> */}
+        <p>
           What I have done so far
         </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
+        {/* <h2 className={`${styles.sectionHeadText} text-center`}> */}
+        <h2>
           Work Experience.
         </h2>
       </motion.div>
@@ -82,4 +84,5 @@ const Experience = () => {
   );
 };
 
-export default SectionWrapper(Experience, "work");
+//export default SectionWrapper(Experience, "work");
+export default Experience;
