@@ -17,7 +17,7 @@ export const App = () => {
                 <Feedbacks />
                 <div className='relative z-0'>
                     <Contact />
-                    {/* <StarsCanvas /> */}
+                    {/* <StarsCanvas />  //wyrzuca błąd, ale się uruchamia */}
                 </div>
             </div>
         </BrowserRouter>

@@ -40,7 +40,7 @@ export const Navbar = () => {
           onClick={() => {
             setActive("");
             window.scrollTo({
-                top: 1000,
+                top: 0,
                 left: 100,
                 behavior: "smooth",
               });
