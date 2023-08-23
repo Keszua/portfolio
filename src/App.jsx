@@ -4,7 +4,6 @@ import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, Stars
 export const App = () => {
     return (
         <BrowserRouter>
-        Zawartość
             <div className="ralative z-0 bg-primary">
                 <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
                     <Navbar />
