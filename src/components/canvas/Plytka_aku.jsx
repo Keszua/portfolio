@@ -64,7 +64,7 @@ export const AkuCanvas = () => {
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           autoRotate
-          autoRotateSpeed={0.2}
+          autoRotateSpeed={0.5}
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           //minPolarAngle={Math.PI / 1.5}
