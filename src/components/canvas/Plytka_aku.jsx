@@ -9,9 +9,9 @@ const Computers = ({ isMobile }) => {
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.15} groundColor='black' />
+      <hemisphereLight intensity={0.9} groundColor='black' />
       <spotLight
-        position={[1.3, 1, 1.4]}
+        position={[0, 0, 10]}
         angle={2}
         penumbra={1}
         intensity={10}
@@ -21,7 +21,7 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={6}
+        scale={1}
         position={isMobile ? [0, -3, -2.2] : [0, 0, 0]}
         rotation={[0.1, -0.9, -0.2]}
       />
@@ -58,14 +58,16 @@ export const AkuCanvas = () => {
       frameloop='demand'
       shadows
       dpr={[1, 2]}
-      camera={{ position: [25, 3, 5], fov: 25 }}
+      camera={{ position: [25, 3, 5], fov: 3, near: 0.1 }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
+          autoRotate
+          autoRotateSpeed={0.2}
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
+          //minPolarAngle={Math.PI / 1.5}
         />
         <Computers isMobile={isMobile} />
       </Suspense>
@@ -77,6 +79,9 @@ export const AkuCanvas = () => {
 
 
 /*
+dokumantacja do reast tree 
+https://docs.pmnd.rs/react-three-fiber/getting-started/introduction
+
 Ruchome animacje w formacie FBX, przykład na filmku:
 https://www.youtube.com/watch?v=pGMKIyALcK0
 */
