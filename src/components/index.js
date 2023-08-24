@@ -24,5 +24,5 @@ export {
   StarsCanvas,
   Tech,
   TildCards,
-  Works,
+  Works
 };

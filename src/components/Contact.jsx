@@ -2,9 +2,9 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
-//import { styles } from "../styles";
+import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
-//import { SectionWrapper } from "../hoc";
+import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
 const Contact = () => {
@@ -72,10 +72,8 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
       >
-        {/* <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3> */}
-        <p >Get in touch</p>
-        <h3 >Contact.</h3>
+        <p className={styles.sectionSubText}>Get in touch</p>
+        <h3 className={styles.sectionHeadText}>Contact.</h3>
 
         <form
           ref={formRef}
@@ -135,5 +133,4 @@ const Contact = () => {
   );
 };
 
-//export default SectionWrapper(Contact, "contact");
-export default Contact;
+export default SectionWrapper(Contact, "contact");
